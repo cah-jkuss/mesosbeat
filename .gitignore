@@ -1,5 +1,6 @@
-/elasticbeat.iml
+/mesosbeat.iml
 /.project
 /.idea
 /Gemfile.lock
 /Gemfile
+mesosbeat

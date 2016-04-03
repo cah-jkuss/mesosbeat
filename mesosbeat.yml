@@ -5,17 +5,13 @@ input:
   # In seconds, defines how often to read server statistics
   period: 10
 
-  # List of URLs to elasticsearch.
-  # Defaults to ["http://127.0.0.1:9200"].
+  # List of URLs to mesos agent.
+  # Defaults to ["http://127.0.0.1:5051"].
   # Note: Do not use trailing slash
   urls:
-    - http://127.0.0.1:9200
+    - http://127.0.0.1:5051/metrics/snapshot
 
-  # Statistics to collect
-  stats:
-    cluster: true
-    nodes: true
-    health: true
+  rootdir: /etc/mesos-slave
 
 ###############################################################################
 ############################# Libbeat Config ##################################

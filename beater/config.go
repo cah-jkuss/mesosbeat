@@ -1,17 +1,17 @@
 package beater
 
-type EsConfig struct {
-	Period *int64
+// Defaults for config variables which are not set
+const (
+	DefaultRootDir string = "/etc/mesos-slave"
+	DefaultUrl string = "http://localhost:5051/metrics/snapshot"
+)
 
-	URLs []string
-
-	Stats struct {
-		Nodes   *bool
-		Cluster *bool
-		Health  *bool
-	}
+type MesosbeatConfig struct {
+	Period 			*int64
+	URLs			[]string
+	RootDir 		string 
 }
 
 type ConfigSettings struct {
-	Input EsConfig
+	Input MesosbeatConfig
 }

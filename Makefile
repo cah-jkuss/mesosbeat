@@ -1,8 +1,8 @@
 PREFIX?=/build
 
 GOFILES = $(shell find . -type f -name '*.go')
-apachebeat: $(GOFILES)
-	go build
+mesosbeat: $(GOFILES)
+   	env GOOS=linux GOARCH=amd64 go build
 
 .PHONY: test
 test:
@@ -10,4 +10,4 @@ test:
 
 .PHONY: clean
 clean:
-	rm elasticbeat || true
+	rm mesosbeat || true
